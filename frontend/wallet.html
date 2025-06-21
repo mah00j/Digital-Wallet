@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Wallet</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Welcome to Your Wallet</h1>
+      <p>
+        Your balance:
+        <iframe src="../backend/balance.php" class="balance-display"></iframe>
+      </p>
+
+      <form action="deposit.html" method="get">
+        <button type="submit" class="btn">Deposit</button>
+      </form>
+
+      <form action="withdraw.html" method="get">
+        <button type="submit" class="btn">Withdraw</button>
+      </form>
+    </div>
+  </body>
+</html>
