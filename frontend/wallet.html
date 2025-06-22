@@ -14,6 +14,10 @@
         <iframe src="../backend/balance.php" class="balance-display"></iframe>
       </p>
 </div>
+      <form action="history.html" method="get">
+        <button type="submit" class="btn">Transaction</button>
+      </form>
+
       <form action="deposit.html" method="get">
         <button type="submit" class="btn">Deposit</button>
       </form>
@@ -32,10 +36,10 @@
             <input type="text" name="address" class="farm" >
             <br>
             Phone:
-            <input type="tel" name="phone" class="farm" >
+            <input type="number" min="0" name="phone" class="farm" >
             <br>
 
-        <button type="submit" class="btn">Update</button>
+        <button type="submit"class="btn">Update</button>
       </form>
     </div>
 

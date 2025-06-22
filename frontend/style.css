@@ -46,7 +46,7 @@ h1 {
 
 .farm {
   width: 100%;
-  padding: 12px;
+  padding: 8px;
   text-align: left;
   margin-bottom: 15px;
   border: 1.8px solid #ddd;
@@ -91,4 +91,20 @@ a.btn:hover {
   padding: 2px;
   color: #2b2828;
   margin: 5px 0;
+}
+
+.transaction-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px;
+}
+
+.transaction-table th {
+  background-color: #3498db;
+  padding: 12px;
+  text-align: left;
+}
+
+.transaction-table td {
+  padding: 12px;
 }

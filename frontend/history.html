@@ -3,7 +3,38 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+
     <title>Transaction History</title>
   </head>
-  <body></body>
+  <body>
+    <h1>Transaction History</h1>
+    <form action="wallet.html" method="get">
+      <button type="submit" class="btn">Back to Wallet</button>
+    </form>
+    <div id="transactions">
+      <!-- Transactions will be displayed here -->
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        fetch("../backend/history.php")
+          .then((response) => response.json())
+          .then((data) => {
+            let html = '<table border=1 class="transaction-table">';
+            html += "<tr><th>Type</th><th>Amount</th><th>Date</th></tr>";
+            data.forEach((transaction) => {
+              html += `
+                    <tr>
+                        <td>${transaction.type}</td>
+                        <td>${transaction.amount}</td>
+                        <td>${transaction.date}</td>
+                    </tr>
+                `;
+            });
+            document.getElementById("transactions").innerHTML = html;
+          });
+      });
+    </script>
+  </body>
 </html>
