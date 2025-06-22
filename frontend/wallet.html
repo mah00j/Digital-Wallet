@@ -1,47 +1,54 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Wallet</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div class="wallet-card">
-      <h1>Welcome to Your Wallet</h1>
-      <div id="wallet-data">
-      <p>
-        Your balance:
-        <iframe src="../backend/balance.php" class="balance-display"></iframe>
-      </p>
-</div>
-      <form action="history.html" method="get">
-        <button type="submit" class="btn">Transaction</button>
-      </form>
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <title>Wallet</title>
+      <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <h1>Welcome to Your Wallet</h1>
+        <div class="page-wrapper">
+            <div class="container">
+        <div id="wallet-data">
+        <p>
+          Your balance:
+          <iframe src="../backend/balance.php" ></iframe>
+        </p>
+  </div>
+        <form action="history.html" method="get">
+          <button type="submit" class="btn">Transaction</button>
+        </form>
 
-      <form action="deposit.html" method="get">
-        <button type="submit" class="btn">Deposit</button>
-      </form>
+        <form action="deposit.html" method="get">
+          <button type="submit" class="btn">Deposit</button>
+        </form>
 
-      <form action="withdraw.html" method="get">
-        <button type="submit" class="btn">Withdraw</button>
-      </form>
-      <form action="../backend/Update.php" method="post">
-          Name:
-            <input type="text" name="name" class="farm" >
-            <br>
-            Email:
-            <input type="email" name="email" class="farm" >
-            <br>
-            Address:
-            <input type="text" name="address" class="farm" >
-            <br>
-            Phone:
-            <input type="number" min="0" name="phone" class="farm" >
-            <br>
+        <form action="withdraw.html" method="get">
+          <button type="submit" class="btn">Withdraw</button>
+        </form>
+        <form action="index.html" method="get">
+          <button type="submit" class="btn">back to login</button>
+        </form>
+        </div>
+        <div class="container">
+        <form action="../backend/Update.php" method="post">
+            Name:
+              <input type="text" name="name" class="farm" >
+              <br>
+              Email:
+              <input type="email" name="email" class="farm" >
+              <br>
+              Address:
+              <input type="text" name="address" class="farm" >
+              <br>
+              Phone:
+              <input type="number" min="0" name="phone" class="farm" >
+              <br>
 
-        <button type="submit"class="btn">Update</button>
-      </form>
-    </div>
+          <button type="submit"class="btn">Update</button>
+        </form>
+        </div>
+      </div>
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {

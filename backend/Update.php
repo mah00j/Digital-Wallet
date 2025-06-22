@@ -14,12 +14,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $phone = $_POST["phone"] ?: $user["phone"];
 
 
-  $sql = "UPDATE user SET name = '$name', email = '$email', address = '$address', phone = '$phone' WHERE id = '$id'";
+$sql = "UPDATE user SET name = '$name', email = '$email', address = '$address', phone = '$phone' WHERE id = '$id'";
 
             if (mysqli_query($conn, $sql)) {
                 echo "profile updated successfully";
                 header("Location: ../frontend/wallet.html");
-                            exit();
+                exit();
 
             } else {
                 echo "error updating profile";
@@ -27,7 +27,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 exit();
 
             }
-        
 }
 }
 ?>
