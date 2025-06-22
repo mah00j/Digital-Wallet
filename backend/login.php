@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit();
     } else {
         echo "User not found";
-        header("Location: ./../frontend/login.html");
+        header("Location: ./../backend/login.php");
         exit();
     }
 }

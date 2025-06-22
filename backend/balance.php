@@ -1,19 +1,22 @@
 <?php
 require 'db.php';
 session_start();
+header("Content-Type: application/json");
+
 $user_id = $_SESSION['user_id'] ?? null;
 
 if (!$user_id) {
-    echo "Login required";
+    echo "no user id is shown, so login first";
     exit();
 }
 
-$sql = "SELECT balance FROM user WHERE id = $user_id";
+$sql = "SELECT name,email,address,phone,balance FROM user WHERE id = '$user_id'";
 $result = mysqli_query($conn, $sql);
 
 if ($result && $row = mysqli_fetch_assoc($result)) {
-    echo "$" . number_format($row['balance'], 2);
+    echo json_encode($row);
+    
 } else {
-    echo "$0.00";
+    echo "User not found";
 }
 ?>

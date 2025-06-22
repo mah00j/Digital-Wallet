@@ -44,14 +44,14 @@ h1 {
   color: #555;
 }
 
-.form input[type="number"] {
+.farm {
   width: 100%;
-  padding: 9.6px 12px;
-  margin-bottom: 24px;
+  padding: 12px;
+  text-align: left;
+  margin-bottom: 15px;
   border: 1.8px solid #ddd;
   border-radius: 5px;
   font: inherit;
-  font-size: 16px;
 }
 
 .btn {
@@ -79,4 +79,16 @@ a.btn {
 
 a.btn:hover {
   background-color: #5a6268;
+}
+
+.balance {
+  font-size: 40px;
+  font-weight: bold;
+  color: #20b75f;
+  margin: 10px 0;
+}
+.user-details p {
+  padding: 2px;
+  color: #2b2828;
+  margin: 5px 0;
 }
